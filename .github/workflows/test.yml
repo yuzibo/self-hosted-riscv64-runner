@@ -1,0 +1,26 @@
+name: test-self-hosted-runner
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
+
+env:
+  wget_alias: 'wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 0'
+  ARCH: riscv
+  board: p550
+  #KBUILD_BUILD_USER: builder
+  #KBUILD_BUILD_HOST: revyos-riscv-builder
+  #KDEB_COMPRESS: none
+  #KDEB_CHANGELOG_DIST: unstable
+
+
+jobs:
+  build-all-os:
+    runs-on: [self-hosted, riscv64]
+    permissions:
+      contents: read
+    steps:
+        - run: echo "Hello from $HOSTNAME"
