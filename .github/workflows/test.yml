@@ -19,7 +19,7 @@ env:
 
 jobs:
   build-all-os:
-    runs-on: [self-hosted, x86]
+    runs-on: [self-hosted, test]
     permissions:
       contents: read
     steps:
