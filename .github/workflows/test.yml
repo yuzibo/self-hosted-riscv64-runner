@@ -11,11 +11,6 @@ env:
   wget_alias: 'wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 0'
   ARCH: x86
   board: DELL
-  #KBUILD_BUILD_USER: builder
-  #KBUILD_BUILD_HOST: revyos-riscv-builder
-  #KDEB_COMPRESS: none
-  #KDEB_CHANGELOG_DIST: unstable
-
 
 jobs:
   build-all-os:
