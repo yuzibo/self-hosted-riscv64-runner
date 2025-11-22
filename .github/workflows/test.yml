@@ -20,4 +20,4 @@ jobs:
         - run: echo "Hello from $HOSTNAME"
 
         - name: echo "run scripts from runner"
-          run:  bash /workspace/rustci-self-hosted-runner/entrypoint.sh
+          run:  bash /home/GHA/tank/entrypoint.sh
